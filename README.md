@@ -51,6 +51,12 @@ aws s3 sync dist s3://gekal-aws-s3-hosting-demo/ --delete
 aws s3 sync dist s3://gekal-aws-s3-hosting-demo/ --delete --cache-control "no-cache, no-store"
 ```
 
+### 注意⚠️
+
+1. 既存のファイルを上書きでアップロードする時に、`cache-control`の指定が反映されない。
+2. AWS Consoleからも直接編集できない。
+   1. オブジェクトメタデータを更新するには、改善された`[コピー]`アクションを使用して`[設定を指定]`を選択します。
+
 ## 動作確認
 
 <https://gekal-aws-s3-hosting-demo.s3.ap-northeast-1.amazonaws.com/index.html>
